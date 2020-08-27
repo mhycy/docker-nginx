@@ -69,7 +69,7 @@ RUN apt update \
     && cd ${BUILD_SRC} \
     && mkdir -p ${BUILD_RELEASE}${NGINX_PREFIX}/conf.d \
     && cp nginx-${NGINX_VERSION}/objs/nginx ${BUILD_RELEASE} \
-    && cp nginx-${NGINX_VERSION}/conf/* ${BUILD_RELEASE}${NGINX_PREFIX} \
+    && cp nginx-${NGINX_VERSION}/conf/* ${BUILD_RELEASE}${NGINX_PREFIX}
 
 FROM ubuntu:18.04
 
