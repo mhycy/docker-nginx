@@ -10,7 +10,7 @@ else
 fi
 
 if [ "$1" = "nginx" -o "$1" = "nginx-debug" ]; then
-    if [ "`ls -A /docker/empty`" = "" ]; then
+    if [ "`ls -A /etc/nginx`" = "" ]; then
         echo >&3 "$0: No files found in /etc/nginx, create configure file"
         cp -R /etc/nginx.sample/* /etc/nginx/ 2>/dev/null
         mkdir -p /etc/nginx/ban-ip-access-cert 2>/dev/null
